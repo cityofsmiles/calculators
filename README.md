@@ -1,6 +1,6 @@
-# calculators
+# Calculators and Solvers for Math Teachers 
 
-A collection of calculators and solvers for high school Math teachers like me. 
+This repo is a collection of calculators and solvers for high school Math teachers like me. 
 
 ## Installation 
 To install the algebra solver: 
@@ -25,4 +25,26 @@ bash install-algeb-solver.sh
 and hit Enter. 
 
 That's it! 
+
+## User's Manual
+To use the algebra solver, the user must have a basic knowledge of representing the following in terms of LaTeX and/or SymPy: 
+
+1. Fractions 
+2. The four basic operations 
+3. Exponentiation 
+
+For example, to input the fraction 1/2, write: 
+```\frac{1}{2}``` for LaTeX or
+```1/2``` for SymPy. 
+
+The user is highly encouraged to learn from various tutorials in the internet. The following links may help: 
+[SymPy](https://docs.sympy.org/latest/tutorial/index.html?fbclid=IwAR1FcACiWE5-2euNo5zEWuEZXWz7WeCQgt1h4aN9ymFlb55_vCspf_LpdzI#tutorial) 
+[LaTeX](https://www.overleaf.com/learn/latex/Fractions_and_Binomials) 
+
+
+
+
+
+
+
 
