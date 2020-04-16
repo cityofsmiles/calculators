@@ -26,6 +26,49 @@ and hit Enter.
 
 That's it! 
 
+To install the synthetic calculator: 
+1. Copy and paste each line to Termux: 
+
+```
+cd ~
+
+pkg upgrade
+
+pkg install -y wget
+
+wget https://cityofsmiles.github.io/install-synthetic-calc.sh
+
+bash install-synthetic-calc.sh
+```
+
+2. Wait for it to finish, then restart Termux. 
+
+3. After restarting, type
+```synth```
+and hit Enter. 
+
+To install the systems solver: 
+1. Copy and paste each line to Termux: 
+
+```
+cd ~
+
+pkg upgrade
+
+pkg install -y wget
+
+wget https://cityofsmiles.github.io/install-systems-solver.sh
+
+bash install-systems-solver.sh
+```
+
+2. Wait for it to finish, then restart Termux. 
+
+3. After restarting, type
+```syst```
+and hit Enter. 
+
+
 ## User's Manual
 To use the algebra solver, the user must have a basic knowledge of representing the following in terms of LaTeX and/or SymPy: 
 
@@ -41,8 +84,7 @@ The user is highly encouraged to learn from various tutorials in the internet. T
 [SymPy](https://docs.sympy.org/latest/tutorial/index.html?fbclid=IwAR1FcACiWE5-2euNo5zEWuEZXWz7WeCQgt1h4aN9ymFlb55_vCspf_LpdzI#tutorial) 
 [LaTeX](https://www.overleaf.com/learn/latex/Fractions_and_Binomials) 
 
-
-
+To use the systems solver and the synthetic calculator, just follow the instructions. The prompts are pretty straight forward. 
 
 
 
