@@ -3,7 +3,8 @@
 A collection of calculators and solvers for high school Math teachers like me. 
 
 ## Installation 
-To install the algebra solver, copy and paste each line to Termux: 
+To install the algebra solver: 
+1. Copy and paste each line to Termux: 
 
 ```
 cd ~
@@ -17,7 +18,9 @@ wget https://cityofsmiles.github.io/install-algeb-solver.sh
 bash install-algeb-solver.sh
 ```
 
-Wait for it to finish. Then type
+2. Wait for it to finish, then restart Termux. 
+
+3. After restarting, type
 ```algeb```
 and hit Enter. 
 
