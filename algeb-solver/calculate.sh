@@ -51,10 +51,12 @@ to complete:
 if [ $operation -eq "1" ]
 	then
 		read -p "
-Please enter the first $input_type expression (numerator):
+Please enter the first $input_type expression
+(numerator):
 " expr_1
 		read -p "
-Please enter the second $input_type expression (denominator):
+Please enter the second $input_type expression
+(denominator):
 " expr_2
 
 	elif [ $operation -ge "2" -a $operation -le "4" ]; 
