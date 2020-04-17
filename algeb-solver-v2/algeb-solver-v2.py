@@ -1,6 +1,6 @@
 #!/usr/bin/python
 
-# python ~/algeb-solver-v2/algeb-solver-v2.py
+# cd ~/algeb-solver-v2; python algeb-solver-v2.py; cd ~
 # cp -r /storage/emulated/0/GNURoot/home/Scripts/termux/calculators/algeb-solver-v2 ~
 
 import os
@@ -100,13 +100,13 @@ Please run the program again.''')
 # Convert LaTeX expressions to SymPy
 	if input_type == "LaTeX": 
 		expr_1 = expr_1.replace('\frac', '\\frac')
-		subprocess.call(["./algeb-solver-v2/latex-to-sympy.sh", expr_1])
+		subprocess.call(["./latex-to-sympy.sh", expr_1])
 		exec(open('sympy-string.py').read())
 		expr_1 = str(string) 
 		
 		if expr_2 != 0:
 			expr_2 = expr_2.replace('\frac', '\\frac')
-			subprocess.call(["./algeb-solver-v2/latex-to-sympy.sh", expr_2])
+			subprocess.call(["./latex-to-sympy.sh", expr_2])
 			exec(open('sympy-string.py').read())
 			expr_2 = str(string) 
 
