@@ -13,9 +13,9 @@ pkg upgrade
 
 pkg install -y wget
 
-wget https://cityofsmiles.github.io/install-algeb-solver.sh
+wget https://cityofsmiles.github.io/install-algeb-solver-v2.sh
 
-bash install-algeb-solver.sh
+bash install-algeb-solver-v2.sh
 ```
 
 2. Wait for it to finish, then restart Termux. 
