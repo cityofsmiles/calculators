@@ -100,13 +100,13 @@ Please run the program again.''')
 # Convert LaTeX expressions to SymPy
 	if input_type == "LaTeX": 
 		expr_1 = expr_1.replace('\frac', '\\frac')
-		subprocess.call(["./latex-to-sympy.sh", expr_1])
+		subprocess.call(["bash /data/data/com.termux/files/home/algeb-solver-v2/latex-to-sympy.sh", expr_1])
 		exec(open('sympy-string.py').read())
 		expr_1 = str(string) 
 		
 		if expr_2 != 0:
 			expr_2 = expr_2.replace('\frac', '\\frac')
-			subprocess.call(["./latex-to-sympy.sh", expr_2])
+			subprocess.call(["bash /data/data/com.termux/files/home/algeb-solver-v2/latex-to-sympy.sh", expr_2])
 			exec(open('sympy-string.py').read())
 			expr_2 = str(string) 
 
