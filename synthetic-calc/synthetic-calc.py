@@ -2,7 +2,6 @@
 
 # python /storage/emulated/0/GNURoot/home/Scripts/termux/synthetic-calc/synthetic-calc.py
 
-from fractions import Fraction as frac
 import os
 columns, rows = os.get_terminal_size(0)
 
@@ -25,6 +24,8 @@ Enjoy!
 ''')
     print(line) 
 welcome() 
+
+from fractions import Fraction as frac
 
 def get_coefficients():
     global firstRow

@@ -2,10 +2,9 @@
 
 # python /storage/emulated/0/GNURoot/home/Scripts/termux/calculators/systems-solver/systems-solver.py
 
-import numpy as np
+
 import os
 columns, rows = os.get_terminal_size(0)
-from fractions import Fraction as frac
 
 line = "\n" + ("=" * columns) + "\n"
 
@@ -25,6 +24,9 @@ Enjoy!
 ''')
 	print(line) 
 welcome() 
+
+import numpy as np
+from fractions import Fraction as frac
 
 def suffix(i):
 	return {1:"st", 2:"nd", 3:"rd"}.get(i%10*(i%100 not in [11,12,13]), "th")

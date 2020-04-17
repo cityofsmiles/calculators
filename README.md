@@ -81,8 +81,8 @@ For example, to input the fraction 1/2, write:
 ```1/2``` for SymPy. 
 
 The user is highly encouraged to learn from various tutorials in the internet. The following links may help: 
-[SymPy](https://docs.sympy.org/latest/tutorial/index.html?fbclid=IwAR1FcACiWE5-2euNo5zEWuEZXWz7WeCQgt1h4aN9ymFlb55_vCspf_LpdzI#tutorial) 
-[LaTeX](https://www.overleaf.com/learn/latex/Fractions_and_Binomials) 
+- [SymPy](https://docs.sympy.org/latest/tutorial/index.html?fbclid=IwAR1FcACiWE5-2euNo5zEWuEZXWz7WeCQgt1h4aN9ymFlb55_vCspf_LpdzI#tutorial) 
+- [LaTeX](https://www.overleaf.com/learn/latex/Fractions_and_Binomials) 
 
 To use the systems solver and the synthetic calculator, just follow the instructions. The prompts are pretty straight forward. 
 
