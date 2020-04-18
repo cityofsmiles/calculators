@@ -26,6 +26,7 @@ and hit Enter.
 
 That's it! 
 
+### Synthetic Calculator 
 To install the synthetic calculator: 
 1. Copy and paste each line to Termux: 
 
@@ -47,6 +48,7 @@ bash install-synthetic-calc.sh
 ```synth```
 and hit Enter. 
 
+### Systems Solver 
 To install the systems solver: 
 1. Copy and paste each line to Termux: 
 
@@ -68,6 +70,7 @@ bash install-systems-solver.sh
 ```syst```
 and hit Enter. 
 
+### General Calculator
 The General Calculator will install the there calculators. To install the General Calculator:  
 1. Copy and paste each line to Termux: 
 
