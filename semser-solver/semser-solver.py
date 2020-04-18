@@ -28,7 +28,7 @@ def suffix(i):
 	return {1:"st", 2:"nd", 3:"rd"}.get(i%10*(i%100 not in [11,12,13]), "th")
 
 def get_prob_type():
-	prob_dict = {1: 'sequences', 2: 'means', 3: 'series'}
+	prob_dict = {1: 'sequence', 2: 'mean', 3: 'series'}
 	prob_type_inp = int(input('''
 Which of the following do you want to solve? 
 1 for Sequences 

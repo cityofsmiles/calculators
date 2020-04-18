@@ -24,14 +24,14 @@ Enjoy!
 ''')
 	print(line) 
 welcome() 
-
-import numpy as np
-from fractions import Fraction as frac
-
-def suffix(i):
-	return {1:"st", 2:"nd", 3:"rd"}.get(i%10*(i%100 not in [11,12,13]), "th")
 	
 def calculate():
+	import numpy as np
+	from fractions import Fraction as frac
+	
+	def suffix(i):
+		return {1:"st", 2:"nd", 3:"rd"}.get(i%10*(i%100 not in [11,12,13]), "th")
+		
 	num_equations = int(input('''
 Please type in the number of equations
 in the system: [default=2]
@@ -71,23 +71,28 @@ the equations separated by comma:
 		num_equations_suffix = str(i+1) + suffix(i+1)
 		print("Value of {} variable = {}".format(num_equations_suffix, result[i])) 
 	print(line) 
-	again()
-
+	
+calculate()
 
 def again():
     calc_again = input('''
 Do you want to calculate again?
 Please type Y for YES or N for NO.
+[Default: NO]
 ''') or "N"
 
     if calc_again.upper() == 'Y':
+        print(line) 
         calculate()
     elif calc_again.upper() == 'N':
+        print(line) 
         print('Babush!')
     else:
+        print(line) 
         again()
 
-calculate()
+again()
+
 
 
 

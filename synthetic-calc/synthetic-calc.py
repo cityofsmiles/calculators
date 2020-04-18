@@ -25,7 +25,6 @@ Enjoy!
     print(line) 
 welcome() 
 
-from fractions import Fraction as frac
 
 def get_coefficients():
     global firstRow
@@ -41,6 +40,7 @@ the polynomial separated by comma:
 get_coefficients()
 
 def calculate():
+	from fractions import Fraction as frac
 	divisor = input('''
 Please type in the constant divisor: 
 ''')
@@ -72,8 +72,9 @@ Please type in the constant divisor:
 	print('\n'.join([''.join(['{:5}'.format(item) for item in row]) 
       for row in result_2]))
 	print(line) 
-	again()
+	
 
+calculate()
 
 def again():
     calc_again = input('''
@@ -97,11 +98,10 @@ What do you want to do next?
         get_coefficients()
         calculate()
     elif calc_again == '4':
+        print(line) 
         print('Babush!')
     else:
+        print(line) 
         again()
 
-
-calculate()
-
-
+again()

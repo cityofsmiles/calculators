@@ -8,6 +8,7 @@ columns, rows = os.get_terminal_size(0)
 
 line = "\n" + ("=" * columns) + "\n"
 
+
 def welcome():
     print(line) 
     print('''
@@ -28,7 +29,13 @@ welcome()
 
 import sys
 import subprocess
-os.chdir("/data/data/com.termux/files/home/algeb-solver-v2")
+
+cur_dir = os.path.dirname(os.path.abspath(__file__))
+
+sys.path.insert(0, cur_dir)
+	
+#os.chdir("/storage/emulated/0/GNURoot/home/Scripts/termux/calculators/algeb-solver-v2")
+os.chdir(cur_dir)
 
 global string
 
@@ -144,14 +151,14 @@ Please run the program again.''')
 		
 	print(line) 
 
-	again()
-
+calculate()
 
 def again():
-    calc_again = input('''
+    calc_again = str(input('''
 Do you want to calculate again?
 Please type Y for YES or N for NO.
-''')
+[Default: NO]
+''') or "N") 
 
     if calc_again.upper() == 'Y':
         print(line) 
@@ -162,6 +169,5 @@ Please type Y for YES or N for NO.
     else:
         print(line) 
         again()
-
-calculate()
-    
+        
+again()
