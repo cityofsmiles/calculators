@@ -3,6 +3,7 @@
 This repo is a collection of calculators and solvers for high school Math teachers like me. 
 
 ## Installation 
+### Algebra Solver 
 To install the algebra solver: 
 1. Copy and paste each line to Termux: 
 
