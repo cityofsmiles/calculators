@@ -1,2 +1,2 @@
 global string
-string = str("q**3")
+string = str("k**4")

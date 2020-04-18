@@ -72,28 +72,30 @@ the equations separated by comma:
 		print("Value of {} variable = {}".format(num_equations_suffix, result[i])) 
 	print(line) 
 	
-calculate()
 
-def again():
-    calc_again = input('''
+
+	def again():
+		calc_again = input('''
 Do you want to calculate again?
 Please type Y for YES or N for NO.
 [Default: NO]
 ''') or "N"
 
-    if calc_again.upper() == 'Y':
-        print(line) 
-        calculate()
-    elif calc_again.upper() == 'N':
-        print(line) 
-        print('Babush!')
-    else:
-        print(line) 
-        again()
+		if calc_again.upper() == 'Y':
+			print(line) 
+			calculate()
+            
+		elif calc_again.upper() == 'N':
+			print(line) 
+			print('Babush!')
+            
+		else:
+			print(line) 
+			again()
 
-again()
+	again()
 
-
+calculate()
 
 
 

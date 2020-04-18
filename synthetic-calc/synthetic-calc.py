@@ -74,10 +74,8 @@ Please type in the constant divisor:
 	print(line) 
 	
 
-calculate()
-
-def again():
-    calc_again = input('''
+	def again():
+		calc_again = input('''
 What do you want to do next?
 1 Try another constant divisor [default]
 2 Continue dividing
@@ -85,23 +83,29 @@ What do you want to do next?
 4 Quit computing 
 ''') or "1"
 
-    if calc_again == '1':
-        calculate()
-    elif calc_again == '2':
-        global firstRow
-        global num_elements
-        if thirdRow[-1] == 0: del thirdRow[-1] 
-        firstRow = thirdRow
-        num_elements = len(firstRow)
-        calculate()
-    elif calc_again == '3':
-        get_coefficients()
-        calculate()
-    elif calc_again == '4':
-        print(line) 
-        print('Babush!')
-    else:
-        print(line) 
-        again()
+		if calc_again == '1':
+			calculate()
+            
+		elif calc_again == '2':
+			global firstRow
+			global num_elements
+			if thirdRow[-1] == 0: del thirdRow[-1] 
+			firstRow = thirdRow
+			num_elements = len(firstRow)
+			calculate()
+            
+		elif calc_again == '3':
+			get_coefficients()
+			calculate()
+            
+		elif calc_again == '4':
+			print(line) 
+			print('Babush!')
+            
+		else:
+			print(line) 
+			again()
 
-again()
+	again()
+
+calculate()

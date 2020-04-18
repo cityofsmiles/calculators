@@ -150,24 +150,28 @@ Please run the program again.''')
 Please run the program again.''') 
 		
 	print(line) 
-
-calculate()
-
-def again():
-    calc_again = str(input('''
+	
+	def again():
+		calc_again = str(input('''
 Do you want to calculate again?
 Please type Y for YES or N for NO.
 [Default: NO]
 ''') or "N") 
 
-    if calc_again.upper() == 'Y':
-        print(line) 
-        calculate()
-    elif calc_again.upper() == 'N':
-        print(line) 
-        print('Babush!')
-    else:
-        print(line) 
-        again()
+		if calc_again.upper() == 'Y':
+			print(line) 
+			calculate()
+			
+		elif calc_again.upper() == 'N':
+			print(line) 
+			print('Babush!')
+  
+		else:
+			print(line) 
+			again()
         
-again()
+	again()
+
+calculate()
+
+	
