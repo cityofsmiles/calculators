@@ -1,4 +1,4 @@
-#!/usr/bin/exec(open('
+#!/usr/bin/python 
 
 # cd /storage/emulated/0/GNURoot/home/Scripts/termux/calculators; python gen_cal.py
 # ln -s /storage/emulated/0/GNURoot/home/Scripts/termux/calculators/gen_cal.py /data/data/com.termux/files/usr/bin/gcal
@@ -53,26 +53,26 @@ Please type in the calculator you want to use:
 		print('''You have not typed a valid input.
 Please run the program again.''')
 
-    def choose_again():
-        print(line) 
-        choose_again = input('''
+	def choose_again():
+		print(line) 
+		choose_again = input('''
 Do you want to use another calculator?
 Please type Y for YES or N for NO.
 [Default: NO]
 ''') or "N"
 
-        if choose_again.upper() == 'Y':
-            print(line) 
-            choose_calc()
+		if choose_again.upper() == 'Y':
+			print(line) 
+			choose_calc()
             
-        elif choose_again.upper() == 'N':
-            print(line) 
-            print('Babush!')
+		elif choose_again.upper() == 'N':
+			print(line) 
+			print('Babush!')
              
-        else:
-            print(line) 
-            choose_again()
+		else:
+			print(line) 
+			choose_again()
 
-    choose_again()
+	choose_again()
 
 choose_calc()
