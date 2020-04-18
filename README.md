@@ -74,7 +74,7 @@ bash install-systems-solver.sh
 and hit Enter. 
 
 ### General Calculator
-The General Calculator will install the there calculators. To install the General Calculator:  
+The General Calculator will install the three calculators. To install the General Calculator:  
 1. Copy and paste each line to Termux: 
 
 ```
