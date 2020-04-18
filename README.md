@@ -3,6 +3,8 @@
 This repo is a collection of calculators and solvers for high school Math teachers like me. 
 
 ## Installation 
+First, the Termux app must be installed in your Android phone. Learning some basic Linux commands such as ```pkg``` and ```cd``` is good but not required. 
+
 ### Algebra Solver 
 To install the algebra solver: 
 1. Copy and paste each line to Termux: 
