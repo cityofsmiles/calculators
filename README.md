@@ -68,6 +68,27 @@ bash install-systems-solver.sh
 ```syst```
 and hit Enter. 
 
+The General Calculator will install the there calculators. To install the General Calculator:  
+1. Copy and paste each line to Termux: 
+
+```
+cd ~
+
+pkg upgrade
+
+pkg install -y wget
+
+wget https://cityofsmiles.github.io/install-gen-cal.sh
+
+bash install-gen-cal.sh
+```
+
+2. Wait for it to finish, then restart Termux. 
+
+3. After restarting, type
+```gcal```
+and hit Enter. 
+
 
 ## User's Manual
 To use the algebra solver, the user must have a basic knowledge of representing the following in terms of LaTeX and/or SymPy: 
