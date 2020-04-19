@@ -29,6 +29,13 @@ and hit Enter.
 
 That's it! 
 
+To uninstall, copy and paste each line to Termux: 
+```
+cd ~
+
+bash uninstall-algeb-solver-v2.sh
+```
+
 ### Synthetic Calculator 
 To install the synthetic calculator: 
 1. Copy and paste each line to Termux: 
@@ -50,6 +57,13 @@ bash install-synthetic-calc.sh
 3. After restarting, type
 ```synth```
 and hit Enter. 
+
+To uninstall, copy and paste each line to Termux: 
+```
+cd ~
+
+bash uninstall-synthetic-calc.sh
+```
 
 ### Systems Solver 
 To install the systems solver: 
@@ -73,6 +87,13 @@ bash install-systems-solver.sh
 ```syst```
 and hit Enter. 
 
+To uninstall, copy and paste each line to Termux: 
+```
+cd ~
+
+bash uninstall-systems-solver.sh
+```
+
 ### General Calculator
 The General Calculator will install the three calculators. To install the General Calculator:  
 1. Copy and paste each line to Termux: 
@@ -95,6 +116,12 @@ bash install-gen-cal.sh
 ```gcal```
 and hit Enter. 
 
+To uninstall, copy and paste each line to Termux: 
+```
+cd ~
+
+bash uninstall-gen-cal.sh
+```
 
 ## User's Manual
 To use the algebra solver, the user must have a basic knowledge of representing the following in terms of LaTeX and/or SymPy: 

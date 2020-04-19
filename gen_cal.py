@@ -15,7 +15,8 @@ def welcome():
 Welcome to the General Calculator  
 by Jonathan R. Bacolod  
 
-Solve problems on algebraic expressions, linear equations, and polynomials. 
+Solve problems on algebraic expressions, 
+linear equations, and polynomials. 
 
 Enjoy!
 ''')
