@@ -38,15 +38,15 @@ Please type in the calculator you want to use:
 ''') or "1") 
 
 	if calc_type == "1":
-		os.chdir("./algeb-solver-v2")
+		os.chdir(cur_dir/"algeb-solver-v2")
 		exec(open('algeb-solver-v2.py').read())
 		os.chdir(cur_dir)
 	elif calc_type == "2": 
-		os.chdir("./synthetic-calc") 
+		os.chdir(cur_dir/"synthetic-calc") 
 		exec(open('synthetic-calc.py').read())
 		os.chdir(cur_dir)
 	elif calc_type == "3": 
-		os.chdir("./systems-solver") 
+		os.chdir(cur_dir/"systems-solver") 
 		exec(open('systems-solver.py').read())
 		os.chdir(cur_dir)
 	else:
