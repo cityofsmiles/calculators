@@ -39,7 +39,12 @@ Please type in the calculator you want to use:
 
 	calc_list = ['algeb-solver-v2', 'synthetic-calc', 'systems-solver']
 	
-	valid = 0
+	if calc_type > len(calc_list):
+		print('''You have not typed a valid input.
+Please run the program again.''')
+		return
+		
+
 	for i in range(0, len(calc_list)):
 		k = i + 1
 		if calc_type == k:
@@ -47,13 +52,8 @@ Please type in the calculator you want to use:
 			os.chdir(dir)
 			file = calc_list[i] + ".py"
 			exec(open(file).read())
-			os.chdir(cur_dir)
-			valid = 1
-			
-	if valid == 0:
-		print('''You have not typed a valid input.
-Please run the program again.''')
-		return
+			os.chdir(cur_dir)			
+	
 
 	def choose_again():
 		print(line) 
