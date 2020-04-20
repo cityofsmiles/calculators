@@ -34,7 +34,6 @@ cur_dir = os.path.dirname(os.path.abspath(__file__))
 
 sys.path.insert(0, cur_dir)
 	
-#os.chdir("/storage/emulated/0/GNURoot/home/Scripts/termux/calculators/algeb-solver-v2")
 os.chdir(cur_dir)
 
 global string

@@ -141,6 +141,8 @@ The user is highly encouraged to learn from various tutorials in the internet. T
 To use the systems solver and the synthetic calculator, just follow the instructions. The prompts are pretty straight forward. 
 
 
+## Contact info
+E-mail me at cityofsmiles at gmail dot com. 
 
 
 

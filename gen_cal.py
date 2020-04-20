@@ -1,7 +1,6 @@
 #!/usr/bin/python 
 
 # cd /storage/emulated/0/GNURoot/home/Scripts/termux/calculators; python gen_cal.py
-# ln -s /storage/emulated/0/GNURoot/home/Scripts/termux/calculators/gen_cal.py /data/data/com.termux/files/usr/bin/gcal
 
 import os
 columns, rows = os.get_terminal_size(0)
@@ -30,32 +29,31 @@ cur_dir = os.path.dirname(os.path.abspath(__file__))
 os.chdir(cur_dir)
 
 def choose_calc():
-	calc_type = str(input('''
+	calc_type = int(input('''
 Please type in the calculator you want to use:
 	
 1 for SymPyTeX Algebra Solver [default]
 2 for Synthetic Division Calculator 
 3 for System of Linear Equations Solver 
-''') or "1") 
+''') or 1) 
 
-	if calc_type == "1":
-		dir = cur_dir + "/" + 'algeb-solver-v2'
-		os.chdir(dir)
-		exec(open('algeb-solver-v2.py').read())
-		os.chdir(cur_dir)
-	elif calc_type == "2": 
-		dir = cur_dir + "/" + 'synthetic-calc'
-		os.chdir(dir)
-		exec(open('synthetic-calc.py').read())
-		os.chdir(cur_dir)
-	elif calc_type == "3": 
-		dir = cur_dir + "/" + 'systems-solver'
-		os.chdir(dir)
-		exec(open('systems-solver.py').read())
-		os.chdir(cur_dir)
-	else:
+	calc_list = ['algeb-solver-v2', 'synthetic-calc', 'systems-solver']
+	
+	valid = 0
+	for i in range(0, len(calc_list)):
+		k = i + 1
+		if calc_type == k:
+			dir = cur_dir + "/" + calc_list[i]
+			os.chdir(dir)
+			file = calc_list[i] + ".py"
+			exec(open(file).read())
+			os.chdir(cur_dir)
+			valid = 1
+			
+	if valid == 0:
 		print('''You have not typed a valid input.
 Please run the program again.''')
+		return
 
 	def choose_again():
 		print(line) 
