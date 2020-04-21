@@ -40,6 +40,7 @@ Please type in the calculator you want to use:
 	calc_list = ['algeb-solver-v2', 'synthetic-calc', 'systems-solver']
 	
 	if calc_type > len(calc_list):
+		print(line) 
 		print('''You have not typed a valid input.
 Please run the program again.''')
 		return
