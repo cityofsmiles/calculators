@@ -2,6 +2,7 @@
 
 # cd ~/algeb-solver-v2; python algeb-solver-v2.py; cd ~
 # cp -r /storage/emulated/0/GNURoot/home/Scripts/termux/calculators/algeb-solver-v2 ~
+# python /storage/emulated/0/GNURoot/home/Scripts/termux/calculators/algeb-solver-v2/algeb-solver-v2.py
 
 import os
 columns, rows = os.get_terminal_size(0)
@@ -39,30 +40,32 @@ os.chdir(cur_dir)
 global string
 
 def calculate():
-	input_output = str(input('''
+	input_output = int(input('''
 Please type in the kind of input and output 
 you will use:
 1 for LaTeX --> LaTeX [default]
 2 for LaTeX --> SymPy  
 3 for SymPy --> LaTeX 
 4 for SymPy --> SymPy
-''') or "1") 
+''') or 1) 
 
-	if input_output == "1":
-		input_type="LaTeX"
-		output_type="LaTeX"
-	elif input_output == "2": 
-		input_type="LaTeX"
-		output_type="SymPy"
-	elif input_output == "3": 
-		input_type="SymPy"
-		output_type="LaTeX"
-	elif input_output == "4": 
-		input_type="SymPy"
-		output_type="SymPy"
-	else:
-		print('You have not typed a valid operator, please run the program again.')
-
+	input_list = [0, 0, 1, 1]
+	output_list = [0, 1, 0, 1]
+	type = ["LaTeX", "SymPy"]
+	
+	if input_output > len(input_list):
+		print(line) 
+		print('''You have not typed a valid input.
+Please run the program again.''')
+		return
+		
+	for i in range(0, len(input_list)):
+		k = i + 1
+		if input_output == k:
+			input_type = type[input_list[i]]
+			output_type = type[output_list[i]]
+		
+		
 	operation = int(input('''
 Please type in the operation you would like 
 to complete:

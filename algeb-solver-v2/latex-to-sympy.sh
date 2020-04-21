@@ -21,19 +21,7 @@ do
 str="${str//"${letter}"/\*"${letter}"}"
 done
 
-
-#str=$(sed "s|\^{|**(|g" | sed "s|\^|**|g" | sed "s|{|(|g" | sed "s|}|)|g" | sed "s|(|*(|g" | sed "s|^\\*||g" | sed "s|-\\*|-|g" | sed "s|(\\*|(|g" | sed "s|\\+\\*|+|g" |sed "s|/\\*|/|g"| sed "s|[ ]\\*| |g" | sed "s|\\*\\*\\*|**|g" | sed "s|/\\*|/|g" | sed "s|,\\*|,|g" <<< $str)
-
-#echo $str |sed "s|\^{|**(|g" | sed "s|\^|**|g" | sed "s|{|(|g" | sed "s|}|)|g" | sed "s|(|*(|g" | sed "s|^\\*||g" | sed "s|-\\*|-|g" | sed "s|(\\*|(|g" | sed "s|\\+\\*|+|g" |sed "s|/\\*|/|g"| sed "s|[ ]\\*| |g" | sed "s|\\*\\*\\*|**|g" | sed "s|/\\*|/|g" | sed "s|,\\*|,|g" 
-
 str=$(echo $str |sed "s|\^{|**(|g" | sed "s|\^|**|g" | sed "s|{|(|g" | sed "s|}|)|g" | sed "s|(|*(|g" | sed "s|^\\*||g" | sed "s|-\\*|-|g" | sed "s|(\\*|(|g" | sed "s|\\+\\*|+|g" |sed "s|/\\*|/|g"| sed "s|[ ]\\*| |g" | sed "s|\\*\\*\\*|**|g" | sed "s|/\\*|/|g" | sed "s|,\\*|,|g") 
 
-#export str
-
-#function print_myvar() {
 echo "global string" > "sympy-string.py"
 echo "string = str(\"$str\")" >> "sympy-string.py"
-#echo "\"$str\"" > "sympy-string.txt"
-#}
-
-#print_myvar
