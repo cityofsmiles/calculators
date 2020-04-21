@@ -6,8 +6,11 @@ import os
 columns, rows = os.get_terminal_size(0)
 from fractions import Fraction as frac
 
-os.chdir("/storage/emulated/0/GNURoot/home/Scripts/termux/calculators/semser-solver")
+cur_dir = os.path.dirname(os.path.abspath(__file__))
+	
+os.chdir(cur_dir)
 
+global line
 line = "\n" + ("=" * columns) + "\n"
 
 def welcome():
@@ -31,46 +34,45 @@ def get_prob_type():
 	prob_dict = {1: 'sequence', 2: 'mean', 3: 'series'}
 	prob_type_inp = int(input('''
 Which of the following do you want to solve? 
-1 for Sequences 
+1 for Sequences [default]
 2 for Means
 3 for Series 
-'''))
+''') or 1)
 	prob_type = prob_dict[prob_type_inp]
 
 	if prob_type_inp == 1:
 		func_type_inp = int(input('''
 Which type of {} do you want to solve? 
-1 for Arithmetic  
+1 for Arithmetic [default]
 2 for Geometric 
 3 for Harmonic 
 4 for Fibonacci  
-'''.format(prob_type)))
+'''.format(prob_type)) or 1)
 
 	elif prob_type_inp == 2:
 		func_type_inp = int(input('''
 Which type of {} do you want to solve? 
-1 for Arithmetic  
+1 for Arithmetic [default]
 2 for Geometric 
 3 for Harmonic 
-'''.format(prob_type)))
+'''.format(prob_type)) or 1)
 
 	elif prob_type_inp == 3:
 		func_type_inp = int(input('''
 Which type of {} do you want to solve? 
-1 for Arithmetic  
+1 for Arithmetic [default]
 2 for Finite Geometric 
 3 for Infinite Geometric  
-4 for Harmonic 
-'''.format(prob_type)))
+'''.format(prob_type)) or 1)
 
 	else:
 		print("You have not typed a valid input.Please type any integer from 1 to 3.")
-		#get_prob_type()
 		
 	func_dict = {1: 'Arithmetic', 2: 'Geometric', 3: 'Harmonic', 4: 'Fibonacci'}
 	func_type = func_dict[func_type_inp]
 	problem = str(func_type + " " + prob_type) 
 	
+	problem_list = ["Arithmetic sequences", "Arithmetic means", "Arithmetic series", "Geometric sequences", "Geometric means", "Finite Geometric series", "Infinite Geometric series", "Harmonic sequences", "Harmonic means", "Fibonacci sequences"]
 	#print(problem) 
 	exec(open("arith-seq.py").read())
         

@@ -37,7 +37,7 @@ Please type in the calculator you want to use:
 3 for System of Linear Equations Solver 
 ''') or 1) 
 
-	calc_list = ['algeb-solver-v2', 'synthetic-calc', 'systems-solver']
+	calc_list = ['algeb_solver_v2', 'synthetic-calc', 'systems-solver']
 	
 	if calc_type > len(calc_list):
 		print(line) 

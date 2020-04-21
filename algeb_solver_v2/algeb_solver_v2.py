@@ -2,10 +2,11 @@
 
 # cd ~/algeb-solver-v2; python algeb-solver-v2.py; cd ~
 # cp -r /storage/emulated/0/GNURoot/home/Scripts/termux/calculators/algeb-solver-v2 ~
-# python /storage/emulated/0/GNURoot/home/Scripts/termux/calculators/algeb-solver-v2/algeb-solver-v2.py
+# python /storage/emulated/0/GNURoot/home/Scripts/termux/calculators/algeb-solver-v2/algeb_solver_v2.py
 
 import os
 columns, rows = os.get_terminal_size(0)
+
 
 line = "\n" + ("=" * columns) + "\n"
 
@@ -153,26 +154,9 @@ Please run the program again.''')
 		
 	print(line) 
 	
-	def again():
-		calc_again = str(input('''
-Do you want to calculate again?
-Please type Y for YES or N for NO.
-[Default: NO]
-''') or "N") 
-
-		if calc_again.upper() == 'Y':
-			print(line) 
-			calculate()
-			
-		elif calc_again.upper() == 'N':
-			print(line) 
-			print('Babush!')
-  
-		else:
-			print(line) 
-			again()
-        
+	from algeb_again import again
 	again()
+	
 
 calculate()
 
