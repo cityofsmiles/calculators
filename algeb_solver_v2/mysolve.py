@@ -2,12 +2,9 @@
 
 # python ~/storage/emulated/0/GNURoot/home/Scripts/fedora/calculator/solve.py
 
-from sympy import symbols, solve, sympify, latex
-
-a, b, c, d, e, f, g, h, i, j, k, l, m, n, o, p, q, r, s, t, u, v, w, x, y, z = symbols('a b c d e f g h i j k l m n o p q r s t u v w x y z')
-
 
 def mysolve(expr_1, expr_2, input_type, output_type):
+	from sympy import solve, sympify, latex
 	expr_1 = sympify(expr_1)
 	expr_2 = sympify(expr_2)
 	input_type = str(input_type)

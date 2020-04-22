@@ -2,7 +2,7 @@
 
 # cd ~/algeb-solver-v2; python algeb-solver-v2.py; cd ~
 # cp -r /storage/emulated/0/GNURoot/home/Scripts/termux/calculators/algeb-solver-v2 ~
-# python /storage/emulated/0/GNURoot/home/Scripts/termux/calculators/algeb-solver-v2/algeb_solver_v2.py
+# python /storage/emulated/0/GNURoot/home/Scripts/termux/calculators/algeb_solver_v2/algeb_solver_v2.py
 
 import os
 columns, rows = os.get_terminal_size(0)

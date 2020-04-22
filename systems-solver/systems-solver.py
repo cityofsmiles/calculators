@@ -62,14 +62,15 @@ the equations separated by comma:
 	coefficients_array = np.array(coefficients_list) 
 	constants_array = np.array(constants) 
 	result = np.linalg.solve(coefficients_array, constants_array)
-	result = [frac(x) for x in result]
+	result_frac = [frac(x) for x in result]
+	result_float = [float(x) for x in result]
 
 # Print results. 
 	print(line) 
 	print("Results:") 
 	for i in range(0, num_equations):
 		num_equations_suffix = str(i+1) + suffix(i+1)
-		print("Value of {} variable = {}".format(num_equations_suffix, result[i])) 
+		print("Value of {} variable = {} or {}".format(num_equations_suffix, result_frac[i], result_float[i])) 
 	print(line) 
 	
 
