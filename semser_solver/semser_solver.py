@@ -43,6 +43,7 @@ Which of the following do you want to solve?
 	prob_type = prob_dict[prob_type_inp]
 
 	if prob_type_inp == 1:
+		func_dict = {1: 'Arithmetic', 2: 'Geometric', 3: 'Harmonic', 4: 'Fibonacci'}
 		func_type_inp = int(input('''
 Which type of {} do you want to solve? 
 1 for Arithmetic [default]
@@ -52,6 +53,7 @@ Which type of {} do you want to solve?
 '''.format(prob_type)) or 1)
 
 	elif prob_type_inp == 2:
+		func_dict = {1: 'Arithmetic', 2: 'Geometric', 3: 'Harmonic'}
 		func_type_inp = int(input('''
 Which type of {} do you want to solve? 
 1 for Arithmetic [default]
@@ -60,6 +62,7 @@ Which type of {} do you want to solve?
 '''.format(prob_type)) or 1)
 
 	elif prob_type_inp == 3:
+		func_dict = {1: 'Arithmetic', 2: 'Finite Geometric', 3: 'Infinite Geometric'}
 		func_type_inp = int(input('''
 Which type of {} do you want to solve? 
 1 for Arithmetic [default]
@@ -70,7 +73,7 @@ Which type of {} do you want to solve?
 	else:
 		print("You have not typed a valid input.Please type any integer from 1 to 3.")
 		
-	func_dict = {1: 'Arithmetic', 2: 'Geometric', 3: 'Harmonic', 4: 'Fibonacci'}
+	
 	func_type = func_dict[func_type_inp]
 	problem = str(func_type + " " + prob_type) 
 	
