@@ -73,7 +73,7 @@ Which type of {} do you want to solve?
 	else:
 		print("You have not typed a valid input.Please type any integer from 1 to 3.")
 		
-	
+	global problem
 	func_type = func_dict[func_type_inp]
 	problem = str(func_type + " " + prob_type) 
 	
@@ -91,32 +91,39 @@ Which type of {} do you want to solve?
 }
 	print(line) 
 	
+	global file
 	file = problem_dict[problem]
+	open_file(file) 
+
+
+def open_file(file):
 	exec(open(file).read())
-	
 	again()
-      
         
 def again():
 		calc_again = input('''
-Do you want to calculate again?
-Please type Y for YES or N for NO.
-[Default: NO]
-''') or "N"
+What do you want to do next?
+1 Solve another problem about 
+  {} [default]
+2 Choose another topic 
+3 Quit computing 
+'''.format(problem)) or "1"
 
-		if calc_again.upper() == 'Y':
+		if calc_again == '1':
+			print(line) 
+			open_file(file)
+            
+		elif calc_again == '2':
 			print(line) 
 			get_prob_type()
             
-		elif calc_again.upper() == 'N':
+		elif calc_again == '3':
 			print(line) 
 			print('Babush!')
             
 		else:
 			print(line) 
 			again()
-
-	
 
 
 get_prob_type()

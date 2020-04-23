@@ -56,7 +56,6 @@ Please type in the constant divisor:
 		product = float(product) 
 		secondRow.insert(x, product)
 		sum = float(firstRow[x])  + float(secondRow[x]) 
-		#sum = frac(sum) 
 		thirdRow.insert(x, sum)
 
 # Print results. 

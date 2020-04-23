@@ -1,6 +1,6 @@
 #!/usr/bin/python 
 
-# python /storage/emulated/0/GNURoot/home/Scripts/termux/calculators/semser_solver/arith_mean.py
+# python /storage/emulated/0/GNURoot/home/Scripts/termux/calculators/semser_solver/harm_mean.py
 
 def calculate():
 	a_1 = str(input('''
@@ -14,9 +14,20 @@ Please type in the number of terms to insert:
 ''')) 
 	n = m + 2
 	
+	def reciprocal(n):
+		return 1/n
+	
+	from sympy import sympify, simplify
+	a_1 = sympify(a_1) 
+	a_1 = reciprocal(a_1) 
+	a_1 = '(' + str(a_1) + ')'
+	
+	a_n = sympify(a_n) 
+	a_n = reciprocal(a_n) 
+	a_n = '(' + str(a_n) + ')'
+	
 	str_to_solve = str('((' + a_n + '-' + a_1 + ')/(' + str(n) + '-' + "1" + '))') 
 	
-	from sympy import sympify
 	to_solve = sympify(str_to_solve) 
 	
 	print(line) 
@@ -29,7 +40,8 @@ Please type in the number of terms to insert:
 	def next_terms(first, difference, n):
 		for i in range(1, int(n+1)):
 			val = sympify(first) + (sympify(difference) * sympify(i)) - sympify(difference) 
-			val = simplify(sympify(val)) 
+			val = simplify(sympify(val))
+			val = reciprocal(val) 
 			term = "a_" + str(i) 
 			print("{} = {}".format(term, val)) 
 			
@@ -45,3 +57,20 @@ calculate()
 
 
 
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
