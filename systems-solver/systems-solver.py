@@ -22,16 +22,18 @@ be written in standard form.
 
 Enjoy! 
 ''')
-	print(line) 
+	#print(line) 
 welcome() 
-	
+
+global calculate
 def calculate():
 	import numpy as np
 	from fractions import Fraction as frac
 	
 	def suffix(i):
 		return {1:"st", 2:"nd", 3:"rd"}.get(i%10*(i%100 not in [11,12,13]), "th")
-		
+	
+	print(line) 
 	num_equations = int(input('''
 Please type in the number of equations
 in the system: [default=2]
@@ -39,9 +41,9 @@ in the system: [default=2]
 
 # Get the coefficients. 
 	coefficients_list = list() 
-
 	for i in range(0, num_equations):
 		num_equations_suffix = str(i+1) + suffix(i+1)
+		print(line) 
 		coefficients_str = str(input('''
 Please type in the numerical coefficients of 
 the {} equation separated by comma: 
@@ -51,6 +53,7 @@ the {} equation separated by comma:
 		coefficients_list.insert(i, row)
 	
 # Get the constant terms. 
+	print(line) 
 	constants_str = str(input('''
 Please type in the constant terms of 
 the equations separated by comma:  
@@ -74,7 +77,7 @@ the equations separated by comma:
 	print(line) 
 	
 
-
+	global again
 	def again():
 		calc_again = input('''
 Do you want to calculate again?

@@ -35,9 +35,10 @@ Please type in the calculator you want to use:
 1 for SymPyTeX Algebra Solver [default]
 2 for Synthetic Division Calculator 
 3 for System of Linear Equations Solver 
+4 for Sequence, Mean, and Series Solver 
 ''') or 1) 
 
-	calc_list = ['algeb_solver_v2', 'synthetic-calc', 'systems-solver']
+	calc_list = ['algeb_solver_v2', 'synthetic-calc', 'systems-solver', 'semser_solver']
 	
 	if calc_type > len(calc_list):
 		print(line) 

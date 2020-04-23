@@ -91,15 +91,18 @@ Which type of {} do you want to solve?
 }
 	print(line) 
 	
-	global file
-	file = problem_dict[problem]
-	open_file(file) 
-
-
-def open_file(file):
-	exec(open(file).read())
-	again()
-        
+	global file_to_open
+	file_to_open = problem_dict[problem]
+	
+	global open_file
+	def open_file(file):
+		exec(open(file).read())
+		again()
+	
+	open_file(file_to_open) 
+	
+	
+global again
 def again():
 		calc_again = input('''
 What do you want to do next?
@@ -111,7 +114,7 @@ What do you want to do next?
 
 		if calc_again == '1':
 			print(line) 
-			open_file(file)
+			open_file(file_to_open)
             
 		elif calc_again == '2':
 			print(line) 

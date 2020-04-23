@@ -22,13 +22,14 @@ in standard form.
 
 Enjoy! 
 ''')
-    print(line) 
+   
 welcome() 
 
-
+global get_coefficients
 def get_coefficients():
     global firstRow
     global num_elements
+    print(line) 
     coefficients = str(input('''
 Please type in the numerical coefficients of 
 the polynomial separated by comma: 
@@ -39,8 +40,10 @@ the polynomial separated by comma:
 
 get_coefficients()
 
+global calculate
 def calculate():
 	from fractions import Fraction as frac
+	print(line) 
 	divisor = input('''
 Please type in the constant divisor: 
 ''')
@@ -72,7 +75,7 @@ Please type in the constant divisor:
       for row in result_2]))
 	print(line) 
 	
-
+	global again
 	def again():
 		calc_again = input('''
 What do you want to do next?

@@ -40,8 +40,11 @@ os.chdir(cur_dir)
 
 global string
 
+global calculate
 def calculate():
-	input_output = int(input('''
+	def get_input_output():
+		global input_output
+		input_output = int(input('''
 Please type in the kind of input and output 
 you will use:
 1 for LaTeX --> LaTeX [default]
@@ -50,15 +53,25 @@ you will use:
 4 for SymPy --> SymPy
 ''') or 1) 
 
+		if input_output > 4:
+			print(line) 
+			print('''You have not typed a valid input.
+Please choose a number from 1 to 4.
+''')
+			print(line) 
+			get_input_output()
+
+	get_input_output()
+
 	input_list = [0, 0, 1, 1]
 	output_list = [0, 1, 0, 1]
 	type = ["LaTeX", "SymPy"]
 	
-	if input_output > len(input_list):
-		print(line) 
-		print('''You have not typed a valid input.
-Please run the program again.''')
-		return
+	#if input_output > len(input_list):
+		#print(line) 
+		#print('''You have not typed a valid input.
+#Please run the program again.''')
+		#return
 		
 	for i in range(0, len(input_list)):
 		k = i + 1
@@ -66,8 +79,10 @@ Please run the program again.''')
 			input_type = type[input_list[i]]
 			output_type = type[output_list[i]]
 		
-		
-	operation = int(input('''
+	def get_operation():
+		print(line) 
+		global operation
+		operation = int(input('''
 Please type in the operation you would like 
 to complete:
 1 for Cancel
@@ -78,7 +93,18 @@ to complete:
 6 for Solve 
 ''')) 
 
+		if operation > 6:
+			print(line) 
+			print('''You have not typed a valid input.
+Please choose a number from 1 to 6.
+''')
+			print(line) 
+			get_operation()
+
+	get_operation()
+
 # Get inputs. 
+	print(line) 
 	if operation == 1: 
 		expr_1 = str(input('''
 Please enter the first {} expression
@@ -154,9 +180,30 @@ Please run the program again.''')
 		
 	print(line) 
 	
-	from algeb_again import again
+	#from algeb_again import again
 	again()
-	
+
+global again
+def again():
+		calc_again = str(input('''
+Do you want to calculate again?
+Please type Y for YES or N for NO.
+[Default: NO]
+''') or "N") 
+
+		if calc_again.upper() == 'Y':
+			print(line) 
+			#from algeb_solver_v2 import calculate
+			calculate()
+			
+		elif calc_again.upper() == 'N':
+			print(line) 
+			print('Babush!')
+			return
+			
+		else:
+			print(line) 
+			again()
 
 calculate()
 

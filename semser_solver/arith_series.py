@@ -6,7 +6,9 @@ def calculate():
 	
 	vars_dict = {'1': 'S_n', '2': 'a_1', '3': 'n', '4': 'd', '5': 'a_n'}
 	
-	var_to_solve_key = str(input('''
+	def get_input():
+		global var_to_solve_key
+		var_to_solve_key = str(input('''
 Please type in the variable to be solved.
 1 for 'S_n' [default]
 2 for 'a_1'
@@ -14,6 +16,16 @@ Please type in the variable to be solved.
 4 for 'd'
 5 for 'a_n' 
 ''') or '1') 
+
+		if int(var_to_solve_key) > 5:
+			print(line) 
+			print('''You have not typed a valid input.
+Please choose a number from 1 to 5.
+''')
+			print(line) 
+			get_input()
+
+	get_input()
 
 	var_to_solve = vars_dict[var_to_solve_key]
 	del vars_dict[var_to_solve_key]

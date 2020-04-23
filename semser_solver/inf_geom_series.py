@@ -5,12 +5,24 @@
 def calculate():
 	vars_dict = {'1': 'S', '2': 'a_1', '3': 'r'}
 	
-	var_to_solve_key = str(input('''
+	def get_input():
+		global var_to_solve_key
+		var_to_solve_key = str(input('''
 Please type in the variable to be solved.
 1 for 'S' [default]
 2 for 'a_1'
 3 for 'r'
 ''') or '1') 
+
+		if int(var_to_solve_key) > 3:
+			print(line) 
+			print('''You have not typed a valid input.
+Please choose a number from 1 to 3.
+''')
+			print(line) 
+			get_input()
+
+	get_input()
 
 	var_to_solve = vars_dict[var_to_solve_key]
 	del vars_dict[var_to_solve_key]
