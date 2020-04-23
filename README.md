@@ -94,8 +94,37 @@ cd ~
 bash uninstall-systems-solver.sh
 ```
 
+### Series Solver 
+To install the Series solver: 
+1. Copy and paste each line to Termux: 
+
+```
+cd ~
+
+pkg upgrade
+
+pkg install -y wget
+
+wget https://cityofsmiles.github.io/install-semser-solver.sh
+
+bash install-semser-solver.sh
+```
+
+2. Wait for it to finish, then restart Termux. 
+
+3. After restarting, type
+```semser```
+and hit Enter. 
+
+To uninstall, copy and paste each line to Termux: 
+```
+cd ~
+
+bash uninstall-semser-solver.sh
+```
+
 ### General Calculator
-The General Calculator will install the three calculators. To install the General Calculator:  
+The General Calculator will install the four calculators. To install the General Calculator:  
 1. Copy and paste each line to Termux: 
 
 ```
