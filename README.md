@@ -167,6 +167,8 @@ The user is highly encouraged to learn from various tutorials in the internet. T
 - [SymPy](https://docs.sympy.org/latest/tutorial/index.html?fbclid=IwAR1FcACiWE5-2euNo5zEWuEZXWz7WeCQgt1h4aN9ymFlb55_vCspf_LpdzI#tutorial) 
 - [LaTeX](https://www.overleaf.com/learn/latex/Fractions_and_Binomials) 
 
+To use the series solver, the input must be in SymPy. 
+
 To use the systems solver and the synthetic calculator, just follow the instructions. The prompts are pretty straight forward. 
 
 
