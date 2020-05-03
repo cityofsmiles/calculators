@@ -179,7 +179,9 @@ To use the systems solver and the synthetic calculator, just follow the instruct
 You may install the General calculator through: 
 ```
 cd ~
+
 wget https://cityofsmiles.github.io/fedora/install-gen-cal.sh
+
 bash install-gen-cal.sh
 ```
 To uninstall: 
