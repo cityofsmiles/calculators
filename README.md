@@ -166,10 +166,28 @@ For example, to input the fraction 1/2, write:
 The user is highly encouraged to learn from various tutorials in the internet. The following links may help: 
 - [SymPy](https://docs.sympy.org/latest/tutorial/index.html?fbclid=IwAR1FcACiWE5-2euNo5zEWuEZXWz7WeCQgt1h4aN9ymFlb55_vCspf_LpdzI#tutorial) 
 - [LaTeX](https://www.overleaf.com/learn/latex/Fractions_and_Binomials) 
+- [LaTeX Math Wiki](https://en.m.wikibooks.org/wiki/LaTeX/Mathematics) 
+- [LaTeX Math Symbols](https://oeis.org/wiki/List_of_LaTeX_mathematical_symbols) 
+
 
 To use the series solver, the input must be in SymPy. 
 
 To use the systems solver and the synthetic calculator, just follow the instructions. The prompts are pretty straight forward. 
+
+
+## For Fedora Users
+You may install the General calculator through: 
+```
+cd ~
+wget https://cityofsmiles.github.io/fedora/uninstall-gen-cal.sh
+bash install-gen-cal.sh
+```
+To uninstall: 
+```
+cd ~
+
+bash uninstall-gen-cal.sh
+```
 
 
 ## Contact info

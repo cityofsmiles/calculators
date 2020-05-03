@@ -66,12 +66,7 @@ Please choose a number from 1 to 4.
 	input_list = [0, 0, 1, 1]
 	output_list = [0, 1, 0, 1]
 	type = ["LaTeX", "SymPy"]
-	
-	#if input_output > len(input_list):
-		#print(line) 
-		#print('''You have not typed a valid input.
-#Please run the program again.''')
-		#return
+
 		
 	for i in range(0, len(input_list)):
 		k = i + 1
