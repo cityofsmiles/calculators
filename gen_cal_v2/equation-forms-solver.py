@@ -33,9 +33,10 @@ Please type in the form of equation you want to use:
 2 for Two-Point Form
 3 for Two-Intercept Form 
 4 for Slope-Intercept Form
+5 for Standard Form
 ''') or 1) 
 
-	form_list = ['point-slope-form', 'two-point-form', 'two-intercept-form', 'slope-intercept-form']
+	form_list = ['point-slope-form', 'two-point-form', 'two-intercept-form', 'slope-intercept-form', 'standard-form']
 	
 	if form_type > len(form_list):
 		print(line) 
