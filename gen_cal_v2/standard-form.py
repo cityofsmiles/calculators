@@ -36,6 +36,15 @@ Please type in the linear expression to convert:
 	else:
 		A = (B/denom_slope)*numer_slope
 		C = -1*(B/denom_y_int)*numer_y_int
+
+	if A == 1:
+		A = ""
+
+	if B == 1:
+		B = ""
+	elif B == -1:
+		B = "-"
+
 	
 	print(line) 
 	print("Result:") 

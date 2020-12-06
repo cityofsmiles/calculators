@@ -46,8 +46,8 @@ Please type in the value of y_2:
 		calc_again = input('''
 Do you want to calculate again?
 Please type Y for YES or N for NO.
-[Default: NO]
-''') or "N"
+[Default: YES]
+''') or "Y"
 
 		if calc_again.upper() == 'Y':
 			print(line) 
